@@ -1,0 +1,17 @@
+<header class="cabecalho">
+  <div>
+    <a href="/"><strong>Leque de Eventos</strong></a>
+
+    <nav aria-label="Principal">
+      <a href="/eventos">Eventos</a>
+      <a href="#organizar">Organizar</a>
+    </nav>
+
+    <button type="button" class="botao-tema" (click)="alternarTema()" [attr.aria-pressed]="tema() === 'dark'">
+      Tema escuro
+    </button>
+
+
+
+  </div>
+</header>

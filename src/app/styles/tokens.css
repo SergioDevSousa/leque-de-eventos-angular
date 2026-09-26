@@ -1,0 +1,55 @@
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --fundo: #faf9fc;
+    --superficie: #fff;
+    --texto: #17131f;
+    --texto2: #5f5870;
+    --marca: #8055c7;
+    --ok: #168347;
+    --linha: rgb(46 35 65/.18);
+    --raio: 12px;
+    --container: 1140px
+  }
+
+  @media(prefers-color-scheme:dark) {
+    :root {
+      --fundo: #0d0b14;
+      --superficie: #161122;
+      --texto: #f5f1fc;
+      --texto2: #c3bad8;
+      --marca: #ad8be7;
+      --ok: #4bd57d;
+      --linha: rgb(226 214 255/.2)
+    }
+  }
+
+  :root[data-tema=dark] {
+    color-scheme: dark;
+    --fundo: #0d0b14;
+    --superficie: #161122;
+    --texto: #f5f1fc;
+    --texto2: #c3bad8;
+    --marca: #ad8be7;
+    --ok: #4bd57d;
+    --linha: rgb(226 214 255/.2)
+  }
+
+  :root[data-tema=light] {
+    color-scheme: light;
+    --fundo: #faf9fc;
+    --superficie: #fff;
+    --texto: #17131f;
+    --texto2: #5f5870;
+    --marca: #8055c7;
+    --ok: #168347;
+    --linha: rgb(46 35 65/.18)
+  }
+  :root {
+    --esp-1: 0.5rem;
+    --esp-2: 1rem;
+    --esp-3: 1.5rem;
+    --esp-4: 2rem;
+    --esp-5: 3rem;
+}
+}

@@ -1,0 +1,354 @@
+@layer componentes {
+    .container {
+        margin-inline: auto;
+        width: min(calc(100% - 2rem), var(--container))
+    }
+
+    .cabecalho {
+        border-bottom: 1px solid var(--linha)
+    }
+
+    .barra {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-height: 68px
+    }
+
+    .marca {
+        align-items: center;
+        display: flex;
+        font-weight: 750;
+        gap: .55rem;
+        text-decoration: none
+    }
+
+    .marca i {
+        background: linear-gradient(135deg, #ff4878, #cb69df);
+        border-radius: 3px 7px 3px 3px;
+        height: 11px;
+        width: 19px
+    }
+
+    .barra nav {
+        align-items: center;
+        display: flex;
+        gap: 1.35rem
+    }
+
+    .barra nav a {
+        padding-block: 1.35rem;
+        text-decoration: none
+    }
+
+    .barra nav .ativo {
+        border-bottom: 2px solid var(--marca);
+        font-weight: 700
+    }
+
+    #tema,
+    .botao {
+        background: transparent;
+        border: 1px solid var(--linha);
+        border-radius: 999px;
+        color: var(--texto);
+        cursor: pointer;
+        font-weight: 700;
+        padding: .58rem 1rem
+    }
+
+    #tema:first-letter {
+        color: #ffb02e
+    }
+
+    main.container {
+        padding-block: clamp(3rem, 7vw, 5.5rem) 5.5rem
+    }
+
+    .hero {
+        margin-bottom: 2.75rem
+    }
+
+    .hero>p {
+        color: var(--texto2);
+        font-size: 1.07rem;
+        margin-top: .8rem;
+        max-width: 68ch
+    }
+
+    .acoes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem
+    }
+
+    .botao {
+        display: inline-block;
+        padding: .72rem 1.35rem;
+        text-decoration: none
+    }
+
+    .primario {
+        background: var(--marca);
+        border-color: transparent;
+        color: #120d1c
+    }
+
+    :root[data-tema=light] .primario {
+        color: #fff
+    }
+
+    .layout {
+        align-items: start;
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: minmax(0, 2.35fr) minmax(240px, .95fr)
+    }
+
+    .layout h2 {
+        margin-bottom: 1.2rem
+    }
+
+    .lista-eventos {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
+    }
+
+    .lista-eventos>li {
+        display: flex;
+        min-width: 0;
+    }
+
+    .card-evento {
+        background: var(--superficie);
+        border: 1px solid color-mix(in srgb, var(--ok) 55%, transparent);
+        border-radius: var(--raio);
+        display: grid;
+        grid-template-columns: 46% 54%;
+        min-height: 255px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+
+    .card-evento__capa {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-evento__corpo {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        padding: 1.4rem;
+    }
+
+    .card-evento__meta {
+        margin-top: auto;
+        padding-top: 1rem;
+    }
+
+    .arte {
+        overflow: hidden;
+        position: relative
+    }
+
+    .arte::before,
+    .arte::after {
+        content: "";
+        position: absolute
+    }
+
+    .react {
+        background: linear-gradient(145deg, #aa6ed8, #e552a9)
+    }
+
+    .react::before {
+        border: 2px solid #ffffff1a;
+        border-radius: 50%;
+        height: 220px;
+        left: -75px;
+        top: 45px;
+        width: 220px
+    }
+
+    .react::after {
+        background: #ffffff12;
+        border-radius: 50%;
+        height: 170px;
+        left: -30px;
+        top: 75px;
+        width: 170px
+    }
+
+    .css {
+        background: linear-gradient(145deg, #159fe1, #7864df)
+    }
+
+    .css::before {
+        background: #ffffff1a;
+        border-radius: 8px;
+        box-shadow: 56px 0 #ffffff0d, 0 56px #ffffff14, 56px 56px #ffffff21, 0 112px #ffffff12, 56px 112px #ffffff26;
+        height: 38px;
+        left: 30px;
+        top: 24px;
+        width: 38px
+    }
+
+    .dados {
+        background: linear-gradient(145deg, #168e72, #08a9d1)
+    }
+
+    .dados::before {
+        background: #ffffff2e;
+        border-radius: 10px;
+        bottom: 30px;
+        box-shadow: 62px -42px #ffffff21;
+        height: 80px;
+        left: 14px;
+        width: 48px
+    }
+
+    .hackathon {
+        background: linear-gradient(145deg, #f0799a, #ff8517)
+    }
+
+    .hackathon::before {
+        background: #ffffff1a;
+        border-radius: 50%;
+        height: 210px;
+        left: -65px;
+        top: 82px;
+        width: 210px
+    }
+
+    .card-conteudo {
+        display: flex;
+        flex-direction: column;
+        padding: 1.4rem
+    }
+
+    .card-conteudo>p {
+        color: var(--texto2);
+        font-size: .86rem;
+        margin-top: .65rem
+    }
+
+    .card-conteudo footer {
+        margin-top: auto;
+        padding-top: 5rem
+    }
+
+    .card-conteudo footer p,
+    .card-lateral p {
+        font-size: .78rem
+    }
+
+    .card-evento a,
+    .card-lateral a {
+        text-decoration: none
+    }
+
+    .card-evento a:hover,
+    .card-lateral a:hover {
+        color: var(--marca);
+        text-decoration: underline
+    }
+
+    .selo {
+        border: 1px solid var(--ok);
+        border-radius: 999px;
+        color: var(--ok);
+        display: inline-block;
+        font-size: .72rem;
+        line-height: 1;
+        margin-top: .5rem;
+        padding: .28rem .55rem
+    }
+
+    aside h2 {
+        font-size: 1rem
+    }
+
+    .card-lateral {
+        background: var(--superficie);
+        border: 1px solid color-mix(in srgb, var(--ok) 55%, transparent);
+        border-radius: var(--raio);
+        margin-bottom: 1.5rem;
+        padding: 1.5rem
+    }
+
+    .card-lateral p {
+        margin-top: 1.25rem
+    }
+
+    .nota {
+        font-size: .78rem;
+        line-height: 1.45
+    }
+
+    .rodape {
+        border-top: 1px solid var(--linha);
+        color: var(--texto2);
+        font-size: .78rem;
+        padding-block: 1.4rem
+    }
+
+    @media(max-width:900px) {
+        .layout {
+            grid-template-columns: 1fr
+        }
+
+        aside {
+            max-width: 34rem
+        }
+    }
+
+    @media(max-width:650px) {
+        .barra {
+            align-items: flex-start;
+            flex-direction: column;
+            padding-block: 1rem
+        }
+
+        .barra nav {
+            gap: .85rem;
+            width: 100%
+        }
+
+        .barra nav a {
+            padding-block: .8rem
+        }
+
+        #tema {
+            margin-left: auto
+        }
+
+        .lista-eventos {
+            grid-template-columns: 1fr
+        }
+    }
+
+    @media(max-width:390px) {
+        .barra nav a {
+            display: none
+        }
+
+        #tema {
+            margin-left: 0
+        }
+
+        .card-evento {
+            grid-template-columns: 38% 62%
+        }
+
+        .card-conteudo {
+            padding: 1rem
+        }
+    }
+}
