@@ -110,48 +110,7 @@
         margin-bottom: 1.2rem
     }
 
-    .lista-eventos {
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 1fr;
-    }
-
-    .lista-eventos>li {
-        display: flex;
-        min-width: 0;
-    }
-
-    .card-evento {
-        background: var(--superficie);
-        border: 1px solid color-mix(in srgb, var(--ok) 55%, transparent);
-        border-radius: var(--raio);
-        display: grid;
-        grid-template-columns: 46% 54%;
-        min-height: 255px;
-        width: 100%;
-        height: 100%;
-        overflow: hidden
-    }
-
-    .card-evento__capa {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .card-evento__corpo {
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        padding: 1.4rem;
-    }
-
-    .card-evento__meta {
-        margin-top: auto;
-        padding-top: 1rem;
-    }
+    /*------------- css retirado aqui ---------------*/
 
     .arte {
         overflow: hidden;

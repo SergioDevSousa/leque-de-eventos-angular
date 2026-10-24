@@ -1,9 +1,8 @@
 <h1>Eventos de tecnologia perto de você</h1>
 
-<p>A página está aberta há {{ segundos() }} s</p>
-<button type="button" (click)="0">não faço nada</button>
-
 <section aria-labelledby="tit-proximos">
   <h2 id="tit-proximos">Próximos eventos</h2>
-  <p>Os cards chegam na aula 04 — com dados, não com HTML copiado oito vezes.</p>
+  <app-lista-eventos [eventos]="destaques" />
 </section>
+
+<app-catalogo />

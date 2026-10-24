@@ -1,0 +1,15 @@
+<section aria-labelledby="tit-todos">
+  <h2 id="tit-todos">Todos os eventos</h2>
+
+  <app-filtros-eventos [(busca)]="busca" [(formato)]="formato" [(soGratuitos)]="soGratuitos" />
+
+  @let lista = visiveis();
+
+  <p aria-live="polite">{{ lista.length }} evento(s) encontrado(s)</p>
+
+  @if (lista.length > 0) {
+    <app-lista-eventos [eventos]="lista" />
+  } @else {
+    <p>Nenhum evento com esses filtros.</p>
+  }
+</section>

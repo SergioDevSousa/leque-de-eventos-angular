@@ -126,7 +126,7 @@ export const EVENTOS: readonly Evento[] = [
   {
     id: '8',
     slug: 'react-recife-meetup-42',
-    titulo: 'React Recife · Meetup #42',
+    titulo: '<img src=x onerror="alert(1)"> React Recife',
     resumo: 'Uma noite sobre Signals e o futuro da reatividade.',
     descricao: 'Duas palestras curtas e uma roda de conversa sobre como signals estão mudando React, Angular e Solid.',
     organizador: 'React Recife',

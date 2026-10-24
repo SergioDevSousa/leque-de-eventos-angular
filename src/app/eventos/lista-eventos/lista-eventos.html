@@ -1,1 +1,5 @@
-<p>lista-eventos works!</p>
+<ul class="lista-eventos">
+  @for (evento of eventos(); track evento.id) {
+    <li><app-card-evento [evento]="evento" /></li>
+  }
+</ul>
