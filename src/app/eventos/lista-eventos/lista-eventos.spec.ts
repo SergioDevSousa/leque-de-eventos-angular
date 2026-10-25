@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ListaEventos } from './lista-eventos';
+import { EVENTOS } from '../eventos.data';
 
 describe('ListaEventos', () => {
   let component: ListaEventos;
@@ -12,6 +13,8 @@ describe('ListaEventos', () => {
 
     fixture = TestBed.createComponent(ListaEventos);
     component = fixture.componentInstance;
+    // Fornece a lista obrigatória antes de renderizar o template.
+    fixture.componentRef.setInput('eventos', EVENTOS);
     await fixture.whenStable();
   });
 

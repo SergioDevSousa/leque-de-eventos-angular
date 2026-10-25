@@ -4,9 +4,10 @@ import { EVENTOS } from '../eventos.data';
 import { aplicarFiltros } from '../tipo';
 import { FiltrosEventos } from '../filtros-eventos/filtros-eventos';
 import { ListaEventos } from '../lista-eventos/lista-eventos';
+import { Aviso } from '../../conpartilhado/aviso/aviso';
 
 @Component({
-  imports: [FiltrosEventos, ListaEventos],
+  imports: [FiltrosEventos, ListaEventos, Aviso],
   selector: 'app-catalogo',
   styleUrl: './catalogo.css',
   templateUrl: './catalogo.html',
@@ -24,5 +25,10 @@ export class Catalogo {
       formato: this.formato(),
       soGratuitos: this.soGratuitos(),
     });
+  }
+  protected limparFiltros(): void {
+    this.busca.set('');
+    this.formato.set('todos');
+    this.soGratuitos.set(false);
   }
 }

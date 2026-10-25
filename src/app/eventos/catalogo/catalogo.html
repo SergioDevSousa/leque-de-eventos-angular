@@ -10,6 +10,8 @@
   @if (lista.length > 0) {
     <app-lista-eventos [eventos]="lista" />
   } @else {
-    <p>Nenhum evento com esses filtros.</p>
+    <app-aviso icone="🔍" acao="Limpar filtros" (agir)="limparFiltros()">
+      Nenhum evento com esses filtros. Tente <strong>tirar um deles</strong>.
+    </app-aviso>
   }
 </section>

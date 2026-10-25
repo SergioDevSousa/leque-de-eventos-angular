@@ -5,4 +5,9 @@
   <app-lista-eventos [eventos]="destaques" />
 </section>
 
-<app-catalogo />
+<!-- o catálogo vira um arquivo JS separado, baixado só quando aparece na tela -->
+@defer (on viewport) {
+  <app-catalogo />
+} @placeholder {
+  <p>Carregando o catálogo completo…</p>
+}
